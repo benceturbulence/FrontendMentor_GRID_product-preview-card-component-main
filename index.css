@@ -1,0 +1,139 @@
+:root {
+    font-size: 14px;
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%)
+}
+
+*,
+::before,
+::after,
+h1 {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.curs {
+    font-family: 'Fraunces', serif;
+}
+
+.headline {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.btn a, .btn__icon {
+    display: block;
+}
+.btn a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+
+}
+
+.btn {
+    background-color: var(--dark-cyan);
+    align-self: end;
+    padding: .8rem 1.4rem;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.currentprice {
+    font-size: 2.4rem;
+    color: var(--dark-grayish-blue);
+    align-items: center;
+}
+
+.oldprice {
+    text-decoration: line-through;
+}
+.description {
+    margin-bottom: 2rem;
+    line-height: 2em;
+    font-size: .95rem;
+}
+
+
+
+span {
+    display: block;
+}
+
+.card__container {
+    max-width: 800px;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 300px auto;
+    background-color: white; 
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+    grid-auto-flow: row;
+}
+
+.hero__image {
+    object-fit: cover;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+}
+
+.card__content {
+    display: grid;
+    grid-column: repeat(5, auto);
+    row-gap: 1rem;
+    padding: 1.3rem;
+}
+
+
+.price_box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.btn {
+    text-align: center;
+    justify-self: center;
+    width: 100%;
+}
+.btn .btn__icon {
+    margin-left: 10px;
+}
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+@media (min-width: 800px) {
+    .card__container {
+        grid-auto-flow: column;
+        grid-template: 500px / 1fr 1fr;
+    }
+    
+    .card__content {
+        padding: 2rem;
+    }
+    
+}
+
+
+
+
+
